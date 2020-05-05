@@ -15,9 +15,11 @@ namespace WeightIndex
 
             Console.WriteLine("Укажите ваш рост в метрах");
             double height = Convert.ToDouble(Console.ReadLine());
+
             Console.WriteLine("Укажите ваш вес в килограммах");
             double weight = Convert.ToDouble(Console.ReadLine());
             double index = weight / (height * height);
+
             Console.WriteLine($"Ваш индекс массы тела: {index}.");
             Console.ReadLine();
         }
