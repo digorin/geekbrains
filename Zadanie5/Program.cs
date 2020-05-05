@@ -35,5 +35,6 @@ namespace Zadanie5
         {
             Console.WriteLine($"{name} {surename}, {city}.");
         }
+        //Запускаю на проверку
     }
 }
