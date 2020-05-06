@@ -1,41 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zadanie2_1
 {
     class Program
+
+    //1. Написать метод, возвращающий минимальное из трех чисел.
+    //Программа не предлагает решения для случаем если несколько числе оказались одинаковыми, так как этого не требовалось в задании
+    //Горин Дмитрий
+
     {
         static void Main(string[] args)
         {
             int n1 = Input("Введите первое число");
             int n2 = Input("Введите второе число");
             int n3 = Input("Введите третье число");
-            
-            if(n1>n2)
+
+            int[] numbers = { n1, n2, n3 };
+
+            int min = numbers[0]; //Небольшой костыль, но вроде без него никак прое не сделать
+            int count = 0;
+
+            foreach (int item in numbers) //сравниваем все элементы массива с минимальным
             {
-                if(n1>n3)
+                if(item <= min)
                 {
-                    Console.WriteLine($"Максимальное число - перове ({n1}).");
-                }
-                else
-                {
-                    Console.WriteLine($"Максимальное число - третье ({n3}).");
+                    min = item;
+                    count++;
                 }
             }
-            else
-            {
-                if (n2 > n3)
-                {
-                    Console.WriteLine($"Максимальное число - второе ({n2}).");
-                }
-                else
-                {
-                    Console.WriteLine($"Максимальное число - третье ({n3}).");
-                }
-            }
+
+            Console.WriteLine($"Минимальное число под номером {count}. Оно равно {min}.");
 
             Console.ReadKey();
         }
