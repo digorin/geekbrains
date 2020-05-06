@@ -25,8 +25,6 @@ namespace Zadanie2_5
             HowAreYou(index);
             WhatToDo(index, height, weight);
             Console.ReadLine();
-
-
         }
 
         static void HowAreYou(double index)
