@@ -17,7 +17,7 @@ namespace Zadanie2_1
 
             int[] numbers = { n1, n2, n3 };
 
-            int min = numbers[0]; //Небольшой костыль, но вроде без него никак прое не сделать
+            int min = numbers[0]; //Небольшой костыль, но вроде без него никак проще не сделать
             int count = 0;
 
             foreach (int item in numbers) //сравниваем все элементы массива с минимальным
